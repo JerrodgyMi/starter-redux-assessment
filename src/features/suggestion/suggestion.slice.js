@@ -4,7 +4,7 @@ export const fetchSuggestion = createAsyncThunk(
   "suggestion/fetchSuggestion",
   async () => {
     const response = await fetch(
-      "http://localhost:3004/api/suggestion"
+      "https://dog.ceo/api/breeds/image/random"
     );
 
     if (!response.ok) {
@@ -12,7 +12,11 @@ export const fetchSuggestion = createAsyncThunk(
     }
 
     const data = await response.json();
-return data.data;
+
+    return {
+      imageUrl: data.message,
+      caption: "Random Dog of the Day 🐶",
+    };
   }
 );
 
@@ -32,7 +36,6 @@ const suggestionSlice = createSlice({
       })
       .addCase(fetchSuggestion.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.hasError = false;
         state.suggestion = action.payload;
       })
       .addCase(fetchSuggestion.rejected, (state) => {
@@ -42,6 +45,6 @@ const suggestionSlice = createSlice({
   },
 });
 
-export default suggestionSlice.reducer;
-
 export const selectSuggestion = (state) => state.suggestion;
+
+export default suggestionSlice.reducer;
