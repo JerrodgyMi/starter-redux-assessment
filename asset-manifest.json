@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/starter-redux-assessment/static/css/main.193301b7.css",
+    "main.js": "/starter-redux-assessment/static/js/main.9e81cf15.js",
+    "index.html": "/starter-redux-assessment/index.html",
+    "main.193301b7.css.map": "/starter-redux-assessment/static/css/main.193301b7.css.map",
+    "main.9e81cf15.js.map": "/starter-redux-assessment/static/js/main.9e81cf15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.193301b7.css",
+    "static/js/main.9e81cf15.js"
+  ]
+}
