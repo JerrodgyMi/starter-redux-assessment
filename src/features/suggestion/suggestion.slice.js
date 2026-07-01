@@ -15,7 +15,7 @@ export const fetchSuggestion = createAsyncThunk(
 
     return {
       imageUrl: data.message,
-      caption: "Random Dog of the Day 🐶",
+      caption: "🐶",
     };
   }
 );
